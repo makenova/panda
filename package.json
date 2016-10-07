@@ -1,6 +1,6 @@
 {
-  "name": "panda",
-  "version": "1.0.0",
+  "name": "@makenova/panda",
+  "version": "1.0.1",
   "description": "format seconds as a digital clock string",
   "main": "index.js",
   "scripts": {
