@@ -1,0 +1,20 @@
+{
+  "name": "panda",
+  "version": "1.0.0",
+  "description": "format seconds as a digital clock string",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "watch-test": "ava --verbose --watch"
+  },
+  "keywords": [
+    "time",
+    "clock",
+    "panda"
+  ],
+  "author": "makenvoa",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}
