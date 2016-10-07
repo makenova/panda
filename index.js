@@ -14,5 +14,4 @@ function convert (timeInSeconds) {
   return leftpad(minutes) + ' : ' + seconds;
 }
 
-
 module.exports = convert;
