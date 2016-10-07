@@ -14,6 +14,7 @@ test('test seconds', function (t) {
 test('test minutes', function (t) {
   t.is(convert(60), '01 : 00');
   t.is(convert(1800), '30 : 00');
+  t.is(convert(7250), '120 : 50');
   t.pass();
 })
 
