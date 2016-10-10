@@ -8,8 +8,12 @@
 
 ## Install
 
-```js
+```sh
 npm install --save @makenova/panda
+
+# OR install it globally for cli use
+
+npm install -g @makenova/panda
 ```
 
 ## Use
@@ -26,4 +30,11 @@ or in with `import`
 import convert from '@makenova/panda')
 convert(7250) // => '120 : 50'
 convert(45012, { hours: true }) // => '12 : 30 : 12'
+```
+
+or if you installed it globally,
+
+```sh
+panda 45012 true # => 750 : 12
+panda 45012 # => 12 : 30 : 12
 ```

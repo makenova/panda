@@ -6,15 +6,15 @@ if (runAsScript)
   convert(process.argv[2], process.argv[3] === 'true' ? { hours: true } : null)
 
 function leftpad (string, pads) {
-  if(!pads) pads = 2; // default padding
-  string = string.toString(); // make sure I have a string
-  if (string.length >= pads) return string;
-  return leftpad('0' + string, pads);
+  if(!pads) pads = 2 // default padding
+  string = string.toString() // make sure I have a string
+  if (string.length >= pads) return string
+  return leftpad('0' + string, pads)
 }
 
 function convert (timeInSeconds, options) {
 
-  timeInSeconds = parseInt(timeInSeconds, 10); // throw away decimals
+  timeInSeconds = parseInt(timeInSeconds, 10) // throw away decimals
   if (isNaN(timeInSeconds)) throw new Error('Cannot parse convert input')
 
   if (options && options.hours) {
@@ -42,4 +42,4 @@ function convert (timeInSeconds, options) {
   }
 }
 
-module.exports = convert;
+module.exports = convert
