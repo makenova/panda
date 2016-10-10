@@ -18,7 +18,7 @@ test('minutes', function (t) {
 
 test('hours', function (t) {
   t.is(convert(3600, { hours: true }), '01 : 00 : 00')
-  t.is(convert(45000, { hours: true }), '12 : 30 : 00')
+  t.is(convert(45012, { hours: true }), '12 : 30 : 12')
 })
 
 test('string', function (t) {
