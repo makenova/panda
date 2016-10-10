@@ -17,6 +17,7 @@ npm install --save @makenova/panda
 ```js
 var convert = require('@makenova/panda')
 convert(7250) // => '120 : 50'
+convert(45012, { hours: true }) // => '12 : 30 : 12'
 ```
 
 or in with `import`
@@ -24,4 +25,5 @@ or in with `import`
 ```js
 import convert from '@makenova/panda')
 convert(7250) // => '120 : 50'
+convert(45012, { hours: true }) // => '12 : 30 : 12'
 ```
