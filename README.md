@@ -35,6 +35,6 @@ convert(45012, { hours: true }) // => '12 : 30 : 12'
 or if you installed it globally,
 
 ```sh
-panda 45012 true # => 750 : 12
-panda 45012 # => 12 : 30 : 12
+panda 45012 # => 750 : 12
+panda 45012 true # => 12 : 30 : 12
 ```
