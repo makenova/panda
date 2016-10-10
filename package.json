@@ -1,10 +1,13 @@
 {
   "name": "@makenova/panda",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "format seconds as a digital clock string",
   "main": "index.js",
+  "bin": {
+  "panda": "./index.js"
+  },
   "scripts": {
-    "test": "ava",
+    "test": "ava --verbose",
     "watch-test": "ava --verbose --watch"
   },
   "keywords": [
