@@ -5,13 +5,25 @@ function leftpad (string, pads) {
   return leftpad('0' + string, pads);
 }
 
-function convert (timeInSeconds) {
+function convert (timeInSeconds, options) {
   timeInSeconds = parseInt(timeInSeconds, 10); // throw away decimals
   if (isNaN(timeInSeconds)) throw new Error('Cannot parse convert input')
-  var minutes = Math.floor(timeInSeconds / 60);
-  var seconds = leftpad((timeInSeconds - (minutes * 60)));
 
-  return leftpad(minutes) + ' : ' + seconds;
+  if (options && options.hours) {
+    var hours = Math.floor(timeInSeconds / 3600)
+  }
+
+  var minutes = (options && options.hours)
+    ? (timeInSeconds - hours * 3600) / 60
+    : Math.floor(timeInSeconds / 60)
+
+  var seconds = (options && options.hours)
+    ? leftpad(timeInSeconds - (minutes * 60) - (hours * 3600))
+    : leftpad(timeInSeconds - (minutes * 60))
+
+  return (options && options.hours)
+    ? leftpad(hours) + ' : ' + leftpad(minutes) + ' : ' + seconds
+    : leftpad(minutes) + ' : ' + seconds
 }
 
 module.exports = convert;

@@ -1,25 +1,28 @@
-var ava = require('ava');
-var test = ava.test;
+var ava = require('ava')
+var test = ava.test
 
-var convert = require('./index');
+var convert = require('./index')
 
-test('test seconds', function (t) {
+test('seconds', function (t) {
   t.is(convert(0), '00 : 00')
   t.is(convert(1), '00 : 01')
   t.is(convert(12), '00 : 12')
   t.is(convert(35.23), '00 : 35')
-  t.pass();
 })
 
-test('test minutes', function (t) {
-  t.is(convert(60), '01 : 00');
-  t.is(convert(1800), '30 : 00');
-  t.is(convert(7250), '120 : 50');
-  t.pass();
+test('minutes', function (t) {
+  t.is(convert(60), '01 : 00')
+  t.is(convert(1800), '30 : 00')
+  t.is(convert(7250), '120 : 50')
 })
 
-test('test string', function (t) {
-  t.is(convert('1800'), '30 : 00');
-  t.throws(function(){convert('abc')}, 'Cannot parse convert input');
-  t.pass();
+test('hours', function (t) {
+  t.is(convert(3600, { hours: true }), '01 : 00 : 00')
+  t.is(convert(45000, { hours: true }), '12 : 30 : 00')
+})
+
+test('string', function (t) {
+  t.is(convert('1800'), '30 : 00')
+  t.is(convert('5400', { hours: true }), '01 : 30 : 00')
+  t.throws(function(){convert('abc')}, 'Cannot parse convert input')
 })
