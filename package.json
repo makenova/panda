@@ -17,6 +17,14 @@
   ],
   "author": "makenvoa",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makenova/panda"
+  },
+  "bugs": "https://github.com/makenova/panda/issues",
+  "engines": {
+    "node": ">=4.1.1"
+  },
   "devDependencies": {
     "ava": "^0.16.0",
     "execa": "^0.5.0"
