@@ -38,3 +38,22 @@ or if you installed it globally,
 panda 45012 # => 750 : 12
 panda 45012 true # => 12 : 30 : 12
 ```
+
+## API
+
+### `convert(seconds, [options])`
+
+Convert seconds to a string formatted as a digital clock string. The default is
+`Minutes : seconds`.
+
+###### options.hours
+
+A boolean that indicates if hours should be displayed.
+
+## Bugs
+
+Please report any bugs to: https://github.com/makenova/nodeginx/issues
+
+## License
+
+Licensed under the MIT License: https://opensource.org/licenses/MIT
