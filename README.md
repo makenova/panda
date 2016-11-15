@@ -52,7 +52,7 @@ A boolean that indicates if hours should be displayed.
 
 ## Bugs
 
-Please report any bugs to: https://github.com/makenova/nodeginx/issues
+Please report any bugs to: https://github.com/makenova/panda/issues
 
 ## License
 
