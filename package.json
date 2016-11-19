@@ -4,7 +4,7 @@
   "description": "format seconds as a digital clock string",
   "main": "index.js",
   "bin": {
-    "panda": "./index.js"
+    "panda": "./cli.js"
   },
   "scripts": {
     "test": "ava --verbose",

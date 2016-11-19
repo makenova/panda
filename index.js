@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-var runAsScript = require.main === module
-
-if (runAsScript)
-  convert(process.argv[2], process.argv[3] === 'true' ? { hours: true } : null)
-
 function leftpad (string, pads) {
   if(!pads) pads = 2 // default padding
   string = string.toString() // make sure I have a string
@@ -33,13 +28,7 @@ function convert (timeInSeconds, options) {
     ? leftpad(hours) + ' : ' + leftpad(minutes) + ' : ' + seconds
     : leftpad(minutes) + ' : ' + seconds
 
-
-  if (runAsScript) {
-    console.log(result)
-    process.exit()
-  } else {
-    return result
-  }
+  return result
 }
 
 module.exports = convert

@@ -2,7 +2,7 @@ var ava = require('ava')
 var test = ava.test
 var execa = require('execa')
 
-var convert = require('./index')
+var convert = require('./')
 
 test('seconds', function (t) {
   t.is(convert(0), '00 : 00')
@@ -29,12 +29,12 @@ test('string', function (t) {
 
 test('cli', function (t) {
   return Promise.all([
-    execa.stdout('./index.js', [10]),
-    execa.stdout('./index.js', [45032, true])
+    execa.stdout('./cli.js', [10]),
+    execa.stdout('./cli.js', [45032, true])
   ]).then(function (values) {
     t.is(values[0], '00 : 10')
     t.is(values[1], '12 : 30 : 32')
-  }).catch(function (reason) {
-    t.fail()
+  }).catch(function (err) {
+    t.fail(err)
   })
 })
