@@ -37,6 +37,19 @@ or if you installed it globally,
 ```sh
 panda 45012 # => 750 : 12
 panda 45012 true # => 12 : 30 : 12
+
+# no args will print usage
+panda
+
+Usage
+$ panda <seconds> [show_hours_boolean]
+
+Examples
+$ panda 45012
+750 : 12
+
+$ panda 45012 true
+12 : 30 : 12
 ```
 
 ## API
